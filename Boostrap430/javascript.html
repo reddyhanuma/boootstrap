@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="./index.js"></script> -->
+
+</head>
+<body>
+    <div class="main">
+        <div id="card">
+
+        </div>
+
+    </div>
+    <script>
+        fetch('data.json').then(response=> response.json())
+        .then(data=>details(data))
+
+        var main=document.querySelector('main');
+        var card=document.getElementById('card')
+
+        function details(info)
+        {
+            var heading=document.createElement('h1');
+            heading.textContent=info.college;
+            card.appendChild(heading);
+            main.appendChild(card)
+        }
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+                                                                                        
